@@ -13,8 +13,9 @@ Estrutura MVC
 
 # com.br.stay.hotels.
 Controller : responsavel pela regra de negocio                                                                                               
-Service: responsavel por expor o serviço/ consumir o serviço
+Service: responsavel por expor o serviço/ consumir o serviço                                                                                 
 model: responsável por manipular os objetos de payload
+
 Utils:  utilizado em todas as camadas como apoio
 
 

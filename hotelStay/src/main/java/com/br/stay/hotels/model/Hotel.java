@@ -1,5 +1,6 @@
 package com.br.stay.hotels.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -56,6 +57,9 @@ public class Hotel {
 	}
 
 	public List<Rooms> getRooms() {
+		if(rooms ==null){
+			rooms = new ArrayList<>();
+		}
 		return rooms;
 	}
 

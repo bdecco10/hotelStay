@@ -16,3 +16,11 @@ Controller : responsavel pela regra de negocio
 Service: responsavel por expor o serviço/ consumir o serviço
 model: responsavel por manipular os objetos de payload
 Utils:  utilizado em todas as camadas como apoio
+
+
+#########
+# Teste #
+#########
+
+Classe de test 
+StayControllerTest: responsavel pelos teste unitarios

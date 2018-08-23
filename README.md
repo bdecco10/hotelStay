@@ -2,7 +2,7 @@
 Calculo de estadia
 
 # OBS: Impementação feita de duas maneira
-1º Usado a dependência feign, para realmente consumir o serviço em tempo de execução, e manter uma performance um pouco melhor                   2º Usado RESTTemplate.
+1º Usado a dependência feign, para realmente consumir o serviço em tempo de execução, e manter uma performance um pouco melhor                                                                                                 2º Usado RESTTemplate.
 
 SpringBoot: 2.0.4.RELEASE
 

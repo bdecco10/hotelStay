@@ -6,7 +6,6 @@ Calculo de estadia
 
 2º Usado RESTTemplate.
 
-#############
 # Framework #
 
 SpringBoot: 2.0.4.RELEASE
@@ -14,7 +13,6 @@ SpringBoot: 2.0.4.RELEASE
 Feign: 9.3.1
 
 
-###########
 # PACKAGE #
 
 # MVC - com.br.stay.hotels. 
@@ -25,7 +23,6 @@ model: responsável por manipular os objetos de payload
 Utils:  utilizado em todas as camadas como apoio
 
 
-#########
 # Teste #
 
 Classe de test   

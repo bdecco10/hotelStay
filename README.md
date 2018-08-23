@@ -28,4 +28,6 @@ Utils:  utilizado em todas as camadas como apoio
 
 Classe de test   
 
-StayControllerTest: responsavel pelos teste unitarios da classe controller                                                                  StayLegacyConsumeTest: responsavel por chamar os serviços 
+StayControllerTest: responsavel pelos teste unitarios da classe controller     
+
+StayLegacyConsumeTest: responsavel por chamar os serviços 

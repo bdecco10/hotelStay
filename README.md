@@ -7,6 +7,7 @@ Calculo de estadia
 2º Usado RESTTemplate.
 
 SpringBoot: 2.0.4.RELEASE
+Feign: 9.3.1
 
 Estrutura MVC
 
@@ -30,4 +31,4 @@ Classe de test
 
 StayControllerTest: responsavel pelos teste unitarios da classe controller     
 
-StayLegacyConsumeTest: responsavel por chamar os serviços 
+StayLegacyConsumeTest: responsavel por chamar os serviços do legado

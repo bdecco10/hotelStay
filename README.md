@@ -14,13 +14,12 @@ SpringBoot: 2.0.4.RELEASE
 
 Feign: 9.3.1
 
-Estrutura MVC
 
 ###########
 # PACKAGE #
 ###########
 
-# com.br.stay.hotels.
+# com.br.stay.hotels. (Estrutura MVC)
 Controller : responsavel pela regra de negocio                                                                                               
 Service: responsavel por expor o serviço                                                                                            
                                                                                                                                       Consume: consumir o serviço                                                                                                                                  

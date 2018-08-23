@@ -19,7 +19,7 @@ Feign: 9.3.1
 # PACKAGE #
 ###########
 
-# com.br.stay.hotels. (Estrutura MVC)
+# MVC - com.br.stay.hotels. 
 Controller : responsavel pela regra de negocio                                                                                               
 Service: responsavel por expor o serviço                                                                                            
                                                                                                                                       Consume: consumir o serviço                                                                                                                                  

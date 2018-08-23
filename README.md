@@ -1,7 +1,7 @@
 # hotelStay
 Calculo de estadia
 
-OBS: Poderia ter usado a dependência feign, para realmente consumir o serviço em tempo de execução, e manter uma performance um pouco melhor, porem por falta de tempo não implementei então usei o próprio RestTemplate.
+# OBS: Impementação feita de duas maneira                                                                                                1º Usado a dependência feign, para realmente consumir o serviço em tempo de execução, e manter uma performance um pouco melhor              2º Usado RESTTemplate.
 
 SpringBoot: 2.0.4.RELEASE
 
@@ -13,7 +13,8 @@ Estrutura MVC
 
 # com.br.stay.hotels.
 Controller : responsavel pela regra de negocio                                                                                               
-Service: responsavel por expor o serviço/ consumir o serviço                                                                                 
+Service: responsavel por expor o serviço                                                                                            
+                                                                                                                                      Consume: consumir o serviço                                                                                                                                  
 model: responsável por manipular os objetos de payload                                                                                      
 Utils:  utilizado em todas as camadas como apoio
 
@@ -23,4 +24,4 @@ Utils:  utilizado em todas as camadas como apoio
 #########
 
 Classe de test                                                                                                                              
-StayControllerTest: responsavel pelos teste unitarios
+StayControllerTest: responsavel pelos teste unitarios da classe controller                                                                  StayLegacyConsumeTest: responsavel por chamar os serviços 

@@ -16,7 +16,7 @@ import com.br.stay.hotels.model.Hotel;
 import com.br.stay.hotels.model.Price;
 import com.br.stay.hotels.model.Rooms;
 import com.br.stay.hotels.model.Travel;
-import com.br.stay.hotels.service.StayLegacyService;
+import com.br.stay.hotels.service.consume.StayLegacyService;
 
 @RunWith(MockitoJUnitRunner.Silent.class) 
 public class StayControllerTest {

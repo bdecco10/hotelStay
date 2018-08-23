@@ -6,13 +6,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.br.stay.hotels.interfaces.IStay;
 import com.br.stay.hotels.model.Hotel;
 import com.br.stay.hotels.model.PriceTrip;
 import com.br.stay.hotels.model.Rooms;
 import com.br.stay.hotels.model.RoomsTrip;
 import com.br.stay.hotels.model.Travel;
-import com.br.stay.hotels.service.consume.StayLegacyService;
+import com.br.stay.hotels.service.consume.StayLegacyServiceFeign;
 import com.br.stay.hotels.utils.StayRersourceValidate;
 /**
  * Classe responsavel em tratar a regra de negocio (Calculo de estadia)
@@ -21,13 +20,13 @@ import com.br.stay.hotels.utils.StayRersourceValidate;
  *
  */
 @Component
-public class StayController extends StayRersourceValidate implements IStay{
+public class StayControllerFeign extends StayRersourceValidate {
 
 	@Autowired
-    private StayLegacyService stayService;
+    private StayLegacyServiceFeign stayLegacyServiceFeign;
 	
 	/**
-	 * Metodo responsavel por calcular a regra de negocio por ID do Hotel, usando RESTTemplate
+	 * Metodo responsavel por calcular a regra de negocio por ID do Hotel, usando Feign
 	 * @param id
 	 * @param checkin
 	 * @param checkout
@@ -36,13 +35,13 @@ public class StayController extends StayRersourceValidate implements IStay{
 	 * @return
 	 * @throws Exception 
 	 */
-	public List<Travel> calculateStayByHotelId(String id,String checkin,String checkout,String amaoutAdult,String amaoutChild) throws Exception{
+	public List<Travel> calculateStayByHotelIdFeign(String id,String checkin,String checkout,String amaoutAdult,String amaoutChild) throws Exception{
 		
 		validateRequest(id,checkin, checkout, amaoutAdult, amaoutChild);
 		
 		List<Travel> travelList = new ArrayList<>();
 		
-		List<Hotel> hotels = stayService.getHotelsById(id);
+		List<Hotel> hotels = stayLegacyServiceFeign.getHotelsByIdFeign(id);
 
 		for (Hotel hotel : hotels) {
 			Travel travel = new Travel();
@@ -67,7 +66,7 @@ public class StayController extends StayRersourceValidate implements IStay{
 	}
 	
 	/**
-	 * Metodo responsavel por calcular a regra de negocio por cidade, usando RESTTemplate
+	 * Metodo responsavel por calcular a regra de negocio por cidade, usando Feign
 	 * @param cityCode
 	 * @param checkin
 	 * @param checkout
@@ -77,12 +76,12 @@ public class StayController extends StayRersourceValidate implements IStay{
 	 * @throws Exception 
 	 */
 	
-	public List<Travel> calculateStayAllByCity(String cityCode,String checkin,String checkout,String amaoutAdult,String amaoutChild) throws Exception{
+	public List<Travel> calculateStayAllByCityFeign(String cityCode,String checkin,String checkout,String amaoutAdult,String amaoutChild) throws Exception{
 		
 		validateRequest(cityCode,checkin, checkout, amaoutAdult, amaoutChild);
 		
 		List<Travel> travelList = new ArrayList<>();
-		List<Hotel> hotels = stayService.getHotelsAvailById(cityCode);
+		List<Hotel> hotels = stayLegacyServiceFeign.getHotelsAvailByIdFeign(cityCode);
 
 		for (Hotel hotel : hotels) {
 			Travel travel = new Travel();
